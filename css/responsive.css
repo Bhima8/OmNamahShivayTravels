@@ -1,0 +1,126 @@
+/* ==================================================================
+   Om Namah Shivay Travels — responsive.css
+   Mobile-first overrides, loaded after style.css
+   ================================================================== */
+
+/* ---------------- Tablet: <= 1024px ---------------- */
+@media (max-width: 1024px) {
+  .grid-4 { grid-template-columns: repeat(2, 1fr); }
+  .grid-3 { grid-template-columns: repeat(2, 1fr); }
+  .trust-stats { grid-template-columns: repeat(2, 1fr); }
+  .process-steps { grid-template-columns: repeat(2, 1fr); }
+  .service-grid { grid-template-columns: repeat(2, 1fr); }
+  .gallery-grid { grid-template-columns: repeat(3, 1fr); }
+
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+
+  .tour-details-grid,
+  .two-col,
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+  .two-col.reverse-mobile { display: flex; flex-direction: column-reverse; }
+
+  .hero-om { width: 300px; height: 300px; }
+}
+
+/* ---------------- Mobile nav breakpoint: <= 860px ---------------- */
+@media (max-width: 860px) {
+  .hamburger { display: flex; }
+  .site-header { backdrop-filter: none; }
+
+  .main-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100dvh;
+    background: var(--color-background);
+    transform: translateX(-100%);
+    transition: transform var(--transition);
+    z-index: 55;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior: contain;
+    padding: calc(var(--header-height) + var(--announcement-height) + 20px) 0 24px;
+  }
+  .main-nav.is-open { transform: translateX(0); }
+
+  .nav-list { flex-direction: column; align-items: stretch; gap: 0; padding: 0 24px; }
+  .nav-link { padding: 16px 6px; border-bottom: 1px solid var(--color-border); border-radius: 0; }
+  .nav-link.is-active::after { display: none; }
+  .nav-link.is-active { color: var(--color-secondary); }
+
+  .header-actions .btn-whatsapp span { display: none; }
+  .header-actions .btn-whatsapp { padding: 10px 12px; }
+
+  /* Dropdown becomes an inline accordion on mobile instead of a floating panel */
+  .nav-item.has-dropdown { flex-direction: column; align-items: stretch; }
+  .nav-link-group { justify-content: space-between; border-bottom: 1px solid var(--color-border); }
+  .nav-link-group .nav-link { border-bottom: none; flex: 1; }
+  .dropdown-menu {
+    position: static;
+    box-shadow: none;
+    padding: 0 0 0 16px;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    transition: max-height var(--transition);
+  }
+  .has-dropdown:not(.is-open) .dropdown-menu { max-height: 0; }
+  .has-dropdown.is-open .dropdown-menu { max-height: 320px; }
+  .dropdown-link { padding: 12px 6px; }
+}
+
+/* ---------------- Small tablet / large phone: <= 768px ---------------- */
+@media (max-width: 768px) {
+  .section { padding: 60px 0; }
+  .section-tight { padding: 40px 0; }
+
+  .grid-4, .grid-3, .grid-2 { grid-template-columns: 1fr; }
+  .trust-stats { grid-template-columns: repeat(2, 1fr); margin-top: 40px; }
+  .process-steps { grid-template-columns: 1fr 1fr; }
+  .service-grid { grid-template-columns: 1fr; }
+  .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+
+  .footer-grid { grid-template-columns: 1fr; padding: 48px 24px 32px; gap: 32px; }
+  .footer-bottom-inner { flex-direction: column; text-align: center; }
+
+  .hero { min-height: 78vh; }
+  .hero-actions { flex-direction: column; align-items: stretch; }
+  .hero-actions .btn { width: 100%; }
+  .hero-om { display: none; }
+
+  .cta-band { padding: 36px 22px; }
+  .cta-actions { flex-direction: column; }
+  .cta-actions .btn { width: 100%; }
+
+  .form-grid { grid-template-columns: 1fr; }
+  .form-card { padding: 24px; }
+
+  .toolbar { flex-direction: column; align-items: stretch; }
+
+  .floating-actions {
+    right: 14px;
+    bottom: calc(14px + env(safe-area-inset-bottom, 0px));
+    z-index: 100;
+  }
+  .fab { width: 50px; height: 50px; font-size: 1.2rem; }
+  .fab[data-tooltip]::before { display: none; }
+  .back-to-top { left: 14px; bottom: calc(14px + env(safe-area-inset-bottom, 0px)); width: 42px; height: 42px; }
+}
+
+/* ---------------- Phone: <= 480px ---------------- */
+@media (max-width: 480px) {
+  .container { padding: 0 18px; }
+  .trust-stats { grid-template-columns: 1fr 1fr; gap: 14px; }
+  .stat-value { font-size: 1.7rem; }
+  .gallery-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+  .process-steps { grid-template-columns: 1fr; }
+  .lightbox-prev, .lightbox-next { width: 40px; height: 40px; }
+  .lightbox-prev { left: 10px; }
+  .lightbox-next { right: 10px; }
+  .lightbox-close { top: 14px; right: 14px; }
+}

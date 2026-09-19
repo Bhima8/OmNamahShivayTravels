@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Travel Stories | Om Namah Shivay Travels</title>
+<meta name="description" content="Travel tips, pilgrimage guides and stories from Om Namah Shivay Travels.">
+<link rel="icon" type="image/svg+xml" href="../images/logo/logo.svg">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<!-- Fonts and icons load asynchronously (preload + swap) so a slow or
+     unreachable CDN never blocks the page from rendering or appearing "stuck". -->
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Work+Sans:wght@400;500;600;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Work+Sans:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+</noscript>
+
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/responsive.css">
+
+<script>const BASE_PATH = "../";</script>
+</head>
+<body>
+
+<a class="visually-hidden" href="#page-content">Skip to main content</a>
+<div id="site-header"></div>
+
+<main id="page-content">
+
+  <section class="page-hero">
+    <svg class="page-hero-om" viewBox="0 0 100 100" aria-hidden="true"><text x="50" y="58" text-anchor="middle" font-family="'Cormorant Garamond', serif" font-size="90" fill="currentColor">&#2384;</text></svg>
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Breadcrumb" style="color:rgba(255,255,255,0.7)">
+        <a href="../index.html" style="color:#fff">Home</a> <span>/</span> <span aria-current="page">Travel Stories</span>
+      </nav>
+      <h1>Travel Stories &amp; Tips</h1>
+      <p>Guides and notes from our pilgrimage and holiday tours.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="toolbar">
+        <label class="search-field">
+          <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+          <input type="search" id="blogSearch" placeholder="Search travel stories">
+          <span class="visually-hidden">Search travel stories</span>
+        </label>
+        <label class="visually-hidden" for="blogCategoryFilter">Filter by category</label>
+        <select id="blogCategoryFilter"></select>
+      </div>
+
+      <div class="grid grid-3" id="blogsGrid"></div>
+    </div>
+  </section>
+
+</main>
+
+<div id="site-footer"></div>
+<div id="floating-actions"></div>
+
+<script src="../js/config.js" defer></script>
+<script src="../js/data.js" defer></script>
+<script src="../js/components.js" defer></script>
+<script src="../js/main.js" defer></script>
+<script src="../js/pages.js" defer></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    initPage({
+      activePageId: "blogs",
+      seo: { title: "Travel Stories", description: "Travel tips, pilgrimage guides and stories from Om Namah Shivay Travels." }
+    });
+    initBlogsPage();
+  });
+</script>
+</body>
+</html>

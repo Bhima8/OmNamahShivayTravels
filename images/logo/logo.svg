@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-labelledby="logoTitle">
+  <title id="logoTitle">Om Namah Shivay Travels</title>
+  <defs>
+    <radialGradient id="glow" cx="50%" cy="38%" r="65%">
+      <stop offset="0%" stop-color="#1c3f66"/>
+      <stop offset="55%" stop-color="#0B1F3A"/>
+      <stop offset="100%" stop-color="#071426"/>
+    </radialGradient>
+    <linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F4D06F"/>
+      <stop offset="45%" stop-color="#D4AF37"/>
+      <stop offset="100%" stop-color="#F28C28"/>
+    </linearGradient>
+    <linearGradient id="mountainGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#2a4d78"/>
+      <stop offset="100%" stop-color="#16345c"/>
+    </linearGradient>
+  </defs>
+
+  <circle cx="60" cy="60" r="57" fill="url(#glow)"/>
+  <circle cx="60" cy="60" r="57" fill="none" stroke="url(#goldGradient)" stroke-width="2.2"/>
+
+  <g fill="url(#goldGradient)" opacity="0.9">
+    <circle cx="60" cy="6.5" r="2"/>
+    <circle cx="79" cy="10.8" r="2"/>
+    <circle cx="95.2" cy="24.8" r="2"/>
+    <circle cx="105.5" cy="43" r="2"/>
+    <circle cx="108.5" cy="60" r="2"/>
+    <circle cx="105.5" cy="77" r="2"/>
+    <circle cx="95.2" cy="95.2" r="2"/>
+    <circle cx="79" cy="109.2" r="2"/>
+    <circle cx="60" cy="113.5" r="2"/>
+    <circle cx="41" cy="109.2" r="2"/>
+    <circle cx="24.8" cy="95.2" r="2"/>
+    <circle cx="14.5" cy="77" r="2"/>
+    <circle cx="11.5" cy="60" r="2"/>
+    <circle cx="14.5" cy="43" r="2"/>
+    <circle cx="24.8" cy="24.8" r="2"/>
+    <circle cx="41" cy="10.8" r="2"/>
+  </g>
+
+  <circle cx="60" cy="66" r="26" fill="url(#goldGradient)" opacity="0.16"/>
+
+  <path d="M14 88 L38 58 L52 74 L70 48 L106 88 Z" fill="url(#mountainGradient)" opacity="0.85"/>
+  <path d="M14 88 L38 58 L44 65 L26 88 Z" fill="#0f2745" opacity="0.6"/>
+
+  <g stroke="url(#goldGradient)" stroke-width="2" fill="none" opacity="0.9">
+    <path d="M60 16 C60 16 50 24 50 34 C50 40.5 55 44.5 60 44.5 C65 44.5 70 40.5 70 34 C70 24 60 16 60 16 Z"/>
+    <line x1="60" y1="16" x2="60" y2="46"/>
+    <line x1="44" y1="27" x2="60" y2="16"/>
+    <line x1="76" y1="27" x2="60" y2="16"/>
+  </g>
+
+  <text x="60" y="70" text-anchor="middle" dominant-baseline="central"
+        font-family="'Cormorant Garamond', Georgia, serif" font-size="44" font-weight="600"
+        fill="url(#goldGradient)" stroke="#071426" stroke-width="0.6">&#2384;</text>
+</svg>
